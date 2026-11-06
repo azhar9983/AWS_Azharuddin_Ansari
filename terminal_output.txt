@@ -1,0 +1,106 @@
+
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari$ cd flask-node-app/
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ cd frontend/
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/frontend$ ls
+Dockerfile  node_modules  package-lock.json  package.json  public  server.js
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/frontend$ docker build -t azhar9983/fn-frontend .
+[+] Building 5.3s (11/11) FINISHED                                                                                                     docker:default
+ => [internal] load build definition from Dockerfile                                                                                             0.0s
+ => => transferring dockerfile: 375B                                                                                                             0.0s
+ => [internal] load metadata for docker.io/library/node:latest                                                                                   2.0s
+ => [auth] library/node:pull token for registry-1.docker.io                                                                                      0.0s
+ => [internal] load .dockerignore                                                                                                                0.0s
+ => => transferring context: 72B                                                                                                                 0.0s
+ => [internal] load build context                                                                                                                0.0s
+ => => transferring context: 3.30kB                                                                                                              0.0s
+ => [1/5] FROM docker.io/library/node:latest@sha256:438603bbb5cda404b9416f0b5c8026f61501ab911760d861ec28c36b5d675725                             0.0s
+ => => resolve docker.io/library/node:latest@sha256:438603bbb5cda404b9416f0b5c8026f61501ab911760d861ec28c36b5d675725                             0.0s
+ => [2/5] WORKDIR /app                                                                                                                           0.0s
+ => [3/5] COPY package.json /app                                                                                                                 0.0s
+ => [4/5] RUN npm install                                                                                                                        2.5s
+ => [5/5] COPY . /app                                                                                                                            0.0s
+ => exporting to image                                                                                                                           0.6s
+ => => exporting layers                                                                                                                          0.3s
+ => => exporting manifest sha256:e9e483eb2e8b6cf3c79acaa7a8e056118586c2ed099f100c6e9eecc9c3ee33da                                                0.0s
+ => => exporting config sha256:204c013af3fdf6f41165aef2ede10c7799ad29694938d77e70b8c5d9c966a2f3                                                  0.0s
+ => => exporting attestation manifest sha256:b883288ec91644e02edbd7c333e2e9b05921c3219b7230ea2a684a53ab362f10                                    0.0s
+ => => exporting manifest list sha256:c836fe0f86f62bc0a1a53e5666a922868d9f7ba3aa279f7712e9532439eb3b49                                           0.0s
+ => => naming to docker.io/azhar9983/fn-frontend:latest                                                                                          0.0s
+ => => unpacking to docker.io/azhar9983/fn-frontend:latest                                                                                       0.2s
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/frontend$ docker run -d -it -p 80:3000 azhar9983/fn-frontend
+97598741bdad788d802ed35d49bdf47b4e1b76eb422a39ee1ebab2020a9b5e51
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/frontend$ docker images
+                                                                                                                                  i Info →   U  In Use
+IMAGE                                      ID             DISK USAGE   CONTENT SIZE   EXTRA
+azhar9983/flask-node-app-backend:latest    c55d3364e2d2        214MB         52.3MB        
+azhar9983/flask-node-app-frontend:latest   2fad92719bdd        1.8GB          448MB        
+azhar9983/fn-frontend:latest               c836fe0f86f6        1.8GB          448MB    U   
+backend:latest                             c55d3364e2d2        214MB         52.3MB        
+frontend:latest                            2fad92719bdd        1.8GB          448MB        
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/frontend$ docker tag azhar9983/fn-frontend:latest public.ecr.aws/w6g4t0c6/azhar9983/fn-frontend:latest
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/frontend$ docker push public.ecr.aws/w6g4t0c6/azhar9983/fn-frontend:latest
+The push refers to repository [public.ecr.aws/w6g4t0c6/azhar9983/fn-frontend]
+44136fa355b3: Pushed 
+a6dd1c05fbba: Pushed 
+e8a88afca2bd: Pushed 
+17136ed2ea16: Pushed 
+411d2dc8717d: Pushed 
+696c1fe91c64: Pushed 
+0f60c9a1423c: Pushed 
+80cda21d38b8: Pushed 
+e0aba0829d01: Pushed 
+31056e74f0ed: Pushed 
+7205457790b2: Pushed 
+28a6565591f2: Pushed 
+3a563c2d5428: Pushed 
+latest: digest: sha256:c836fe0f86f62bc0a1a53e5666a922868d9f7ba3aa279f7712e9532439eb3b49 size: 856
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/frontend$ cd ..
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ cd backend/
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/backend$ ls
+Dockerfile  app.py  data.json  penv  requirements.txt
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/backend$ docker build -t azhar9983/fn-backend .
+[+] Building 2.7s (11/11) FINISHED                                                                                                     docker:default
+ => [internal] load build definition from Dockerfile                                                                                             0.0s
+ => => transferring dockerfile: 404B                                                                                                             0.0s
+ => [internal] load metadata for docker.io/library/python:3.11-slim                                                                              2.3s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                    0.0s
+ => [internal] load .dockerignore                                                                                                                0.0s
+ => => transferring context: 45B                                                                                                                 0.0s
+ => [1/5] FROM docker.io/library/python:3.11-slim@sha256:65bd3d9f1d7fa268dd1909973ba7eb4bdf41f6dcf2cfbe76ba9528b170f3fd79                        0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:65bd3d9f1d7fa268dd1909973ba7eb4bdf41f6dcf2cfbe76ba9528b170f3fd79                        0.0s
+ => [internal] load build context                                                                                                                0.0s
+ => => transferring context: 579B                                                                                                                0.0s
+ => CACHED [2/5] WORKDIR /app                                                                                                                    0.0s
+ => CACHED [3/5] COPY requirements.txt /app                                                                                                      0.0s
+ => CACHED [4/5] RUN pip install -r requirements.txt                                                                                             0.0s
+ => [5/5] COPY . /app                                                                                                                            0.0s
+ => exporting to image                                                                                                                           0.2s
+ => => exporting layers                                                                                                                          0.1s
+ => => exporting manifest sha256:e5d2c1a7d674ddde1222db53b34729c4cee850e20cf6bc475e5182bac6ee84db                                                0.0s
+ => => exporting config sha256:a66b16d156171404c8797a361c428d88ec45ffc0aa72608d61bdf2b79620e0cd                                                  0.0s
+ => => exporting attestation manifest sha256:69db341078a90af79bd7e8ddfa735a309e4d62e4efb3906eb4a84ff0fd13ac89                                    0.0s
+ => => exporting manifest list sha256:a2e828d491c04d00305704bd7f4c5166fb939ba8e32e14a247b0ed33178587c8                                           0.0s
+ => => naming to docker.io/azhar9983/fn-backend:latest                                                                                           0.0s
+ => => unpacking to docker.io/azhar9983/fn-backend:latest                                                                                        0.0s
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/backend$ docker run -d -it -p 8085:5000 azhar9983/fn-backend
+543738af28e426d020c2ce852c64538941418d0919ad50802c550d154a0ca220
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/backend$ docker ps
+CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+543738af28e4   azhar9983/fn-backend    "python app.py"          4 minutes ago    Up 4 minutes    0.0.0.0:8085->5000/tcp, [::]:8085->5000/tcp   zen_wing
+97598741bdad   azhar9983/fn-frontend   "docker-entrypoint.s…"   17 minutes ago   Up 17 minutes   0.0.0.0:80->3000/tcp, [::]:80->3000/tcp       awesome_mayer
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/backend$ docker run -d -it -p 5000:5000 azhar9983/fn-backend
+591131a7150840925c897af1878fdf9c95251e9154f93e4fffb31d5845d28798
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/backend$ docker tag azhar9983/fn-backend:latest public.ecr.aws/w6g4t0c6/azhar9983/fn-backend:latest
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app/backend$ docker push public.ecr.aws/w6g4t0c6/azhar9983/fn-backend:latest
+The push refers to repository [public.ecr.aws/w6g4t0c6/azhar9983/fn-backend]
+505d7be01ae8: Pushed 
+44136fa355b3: Pushed 
+37fb86c2a767: Pushed 
+53daecf7856e: Pushed 
+7efbce397249: Pushed 
+bbe7053e6def: Pushed 
+ccb08a3846a7: Pushed 
+aaa1fd3ad9a4: Pushed 
+015f74ff707d: Pushed 
+1d0613cedbc7: Pushed 
+latest: digest: sha256:a2e828d491c04d00305704bd7f4c5166fb939ba8e32e14a247b0ed33178587c8 size: 856
