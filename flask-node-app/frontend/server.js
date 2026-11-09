@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 // Change this line in your frontend code
-const BACKEND_URL = (process.env.BACKEND_URL || 'http://fn-service-discovery.fn-backend:5000').replace(/\/+$/, '');
+const BACKEND_URL = (process.env.BACKEND_URL || 'http://fn-service-discovery.fn-backend.local:5000').replace(/\/+$/, '');
 
 app.use(express.json({ limit: '10kb' }));
 app.use(express.static(path.join(__dirname, 'public')));
