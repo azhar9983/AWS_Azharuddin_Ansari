@@ -2,11 +2,10 @@ task_1
 
 
 frontend
-http://13.201.192.52:3000/ 
+http://15.252.239.147:3000/
 
 backend
-http://13.201.192.52:5000/view_data
-
+http://15.252.239.147:5000/view_data
 
 task_2
 
@@ -20,3 +19,10 @@ http://13.204.80.145:5000/view_data
 
 task3
 
+frontend
+http://65.1.84.198:3000/
+ 
+backend
+http://65.1.84.198:5000/view_data
+ 
+  

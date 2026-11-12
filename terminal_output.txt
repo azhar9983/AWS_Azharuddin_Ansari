@@ -104,3 +104,771 @@ aaa1fd3ad9a4: Pushed
 015f74ff707d: Pushed 
 1d0613cedbc7: Pushed 
 latest: digest: sha256:a2e828d491c04d00305704bd7f4c5166fb939ba8e32e14a247b0ed33178587c8 size: 856
+
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari$ docker images
+                                                                                                                                                                           i Info →   U  In Use
+IMAGE                                                  ID             DISK USAGE   CONTENT SIZE   EXTRA
+azhar9983/flask-node-app-backend:latest                c55d3364e2d2        214MB         52.3MB        
+azhar9983/flask-node-app-frontend:latest               2fad92719bdd        1.8GB          448MB        
+azhar9983/fn-backend:latest                            3c563c7562bc        214MB         52.3MB        
+azhar9983/fn-frontend:latest                           3afb818db4d6        1.8GB          448MB        
+backend:latest                                         c55d3364e2d2        214MB         52.3MB        
+cleanyourtv-android-build:latest                       d0c2259683b4       1.54GB          499MB        
+frontend:latest                                        2fad92719bdd        1.8GB          448MB        
+public.ecr.aws/w6g4t0c6/azhar9983/fn-backend:latest    3c563c7562bc        214MB         52.3MB        
+public.ecr.aws/w6g4t0c6/azhar9983/fn-frontend:latest   3afb818db4d6        1.8GB          448MB        
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari$ docker rm $(docker ps -aq)
+docker: 'docker rm' requires at least 1 argument
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+See 'docker rm --help' for more information
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari$ docker rmi $(docker images)
+Untagged: azhar9983/flask-node-app-backend:latest
+Untagged: backend:latest
+Deleted: sha256:c55d3364e2d2b445ba0d511bf8cfe2137a3071dd99983a79eced9ca69ef6cfaa
+Untagged: azhar9983/flask-node-app-frontend:latest
+Untagged: frontend:latest
+Deleted: sha256:2fad92719bddf6051757225e50a54c0738b973610f21fa3899f8291a3f7a10c3
+Untagged: azhar9983/fn-backend:latest
+Untagged: public.ecr.aws/w6g4t0c6/azhar9983/fn-backend:latest
+Deleted: sha256:3c563c7562bc665139b606dd05227f072095597ffdb1066599f458c45a578c95
+Untagged: azhar9983/fn-frontend:latest
+Untagged: public.ecr.aws/w6g4t0c6/azhar9983/fn-frontend:latest
+Deleted: sha256:3afb818db4d66dad3ba26dad2ceccf65b67eb67f2c8dfed9466fc0fee9f925e1
+Untagged: cleanyourtv-android-build:latest
+Deleted: sha256:d0c2259683b4a35ebae69d7f9908154f0421db5ca72004965dd94fe1c3b0949a
+Error response from daemon: invalid reference format: repository name (library/IMAGE) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/ID) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/DISK) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/USAGE) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/CONTENT) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/SIZE) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/EXTRA) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/214MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/52.3MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/1.8GB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/448MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/214MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/52.3MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/1.8GB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/448MB) must be lowercase
+Error response from daemon: No such image: backend:latest
+Error response from daemon: No such image: c55d3364e2d2:latest
+Error response from daemon: invalid reference format: repository name (library/214MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/52.3MB) must be lowercase
+Error response from daemon: No such image: d0c2259683b4:latest
+Error response from daemon: invalid reference format: repository name (library/1.54GB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/499MB) must be lowercase
+Error response from daemon: No such image: frontend:latest
+Error response from daemon: No such image: 2fad92719bdd:latest
+Error response from daemon: invalid reference format: repository name (library/1.8GB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/448MB) must be lowercase
+Error response from daemon: No such image: public.ecr.aws/w6g4t0c6/azhar9983/fn-backend:latest
+Error response from daemon: No such image: 3c563c7562bc:latest
+Error response from daemon: invalid reference format: repository name (library/214MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/52.3MB) must be lowercase
+Error response from daemon: No such image: public.ecr.aws/w6g4t0c6/azhar9983/fn-frontend:latest
+Error response from daemon: No such image: 3afb818db4d6:latest
+Error response from daemon: invalid reference format: repository name (library/1.8GB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/448MB) must be lowercase
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari$ docker images
+                                                                                                                                                                           i Info →   U  In Use
+IMAGE   ID             DISK USAGE   CONTENT SIZE   EXTRA
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari$ history | grep docker compose
+grep: compose: No such file or directory
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari$ cd flask-node-app/
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker compose up -d --build
+WARN[0000] /home/azhar/tutedude/AWS_Azharuddin_Ansari/flask-node-app/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Building 20.2s (25/25) FINISHED                                                                                                                                                            
+ => [internal] load local bake definitions                                                                                                                                                0.0s
+ => => reading from stdin 1.16kB                                                                                                                                                          0.0s
+ => [flask-backend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 404B                                                                                                                                                      0.0s
+ => [node-frontend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 375B                                                                                                                                                      0.0s
+ => [node-frontend internal] load metadata for docker.io/library/node:latest                                                                                                              2.9s
+ => [flask-backend internal] load metadata for docker.io/library/python:3.11-slim                                                                                                         1.7s
+ => [auth] library/node:pull token for registry-1.docker.io                                                                                                                               0.0s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                                                             0.0s
+ => [flask-backend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 45B                                                                                                                                                          0.0s
+ => [flask-backend 1/5] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                   0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                                 0.0s
+ => [flask-backend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 2.87kB                                                                                                                                                       0.0s
+ => CACHED [flask-backend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [flask-backend 3/5] COPY requirements.txt /app                                                                                                                                 0.0s
+ => CACHED [flask-backend 4/5] RUN pip install -r requirements.txt                                                                                                                        0.0s
+ => CACHED [flask-backend 5/5] COPY . /app                                                                                                                                                0.0s
+ => [flask-backend] exporting to image                                                                                                                                                    0.3s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:5f5d62ee54037d153319f8d77d2ec53b4529c733ab19bab346b6de478ebea428                                                                                         0.0s
+ => => exporting config sha256:b923f0d534ea66f759d6a007b8d23fc6a3d45cf00bd38c1d6b82fd47df66d086                                                                                           0.0s
+ => => exporting attestation manifest sha256:8f2435fa13122d6ab9f10d994c44c8626440022276123cbf43a7f0113a04716d                                                                             0.0s
+ => => exporting manifest list sha256:c6183954908b1d4f48520ac322a64cd5de3950412a2a0e0c0101c56f9e9624c1                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                 0.2s
+ => [flask-backend] resolving provenance for metadata file                                                                                                                                0.0s
+ => [node-frontend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 72B                                                                                                                                                          0.0s
+ => [node-frontend 1/5] FROM docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                       13.7s
+ => => resolve docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                                      0.0s
+ => => sha256:eca6dde014d72e002e74c58c341232767b0469ad2707552620b2053d3ee3fd0b 447B / 447B                                                                                                0.5s
+ => => sha256:4266ea1582911c18c0ac8ae08132bc27e0853299344762137649beeef762e40e 64.79MB / 64.79MB                                                                                         12.8s
+ => => sha256:14f1299dcbc9edbeebec06a33466b4fc8320ead9d8d9b7ef3ab01c87d068c66a 3.33kB / 3.33kB                                                                                            1.2s
+ => => extracting sha256:14f1299dcbc9edbeebec06a33466b4fc8320ead9d8d9b7ef3ab01c87d068c66a                                                                                                 0.0s
+ => => extracting sha256:4266ea1582911c18c0ac8ae08132bc27e0853299344762137649beeef762e40e                                                                                                 0.7s
+ => => extracting sha256:eca6dde014d72e002e74c58c341232767b0469ad2707552620b2053d3ee3fd0b                                                                                                 0.0s
+ => [node-frontend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 5.90kB                                                                                                                                                       0.0s
+ => [node-frontend 2/5] WORKDIR /app                                                                                                                                                      0.1s
+ => [node-frontend 3/5] COPY package.json /app                                                                                                                                            0.0s
+ => [node-frontend 4/5] RUN npm install                                                                                                                                                   1.9s
+ => [node-frontend 5/5] COPY . /app                                                                                                                                                       0.0s
+ => [node-frontend] exporting to image                                                                                                                                                    1.3s
+ => => exporting layers                                                                                                                                                                   0.3s
+ => => exporting manifest sha256:ecf455250c5668eafeb60024b5a4748e61cc7e809b38d887494ae9737b57a660                                                                                         0.0s
+ => => exporting config sha256:ce32c941c86a3c4f6518f1743e9542e8b79feb6df6484d42098b3f63f194fd50                                                                                           0.0s
+ => => exporting attestation manifest sha256:5965d1607ec1f1fe2684ad99731d75f51c2f68b0c33256b489c7c5f132c1e8d3                                                                             0.0s
+ => => exporting manifest list sha256:a16f1d6cf83faa9d397a044d73f5f1015165de0f0f91650e3e9387d329dcaa4c                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                 0.9s
+ => [node-frontend] resolving provenance for metadata file                                                                                                                                0.0s
+[+] up 4/4
+ ✔ Image flask-node-app-node-frontend       Built                                                                                                                                         20.3s
+ ✔ Image flask-node-app-flask-backend       Built                                                                                                                                         20.3s
+ ✔ Container flask-node-app-flask-backend-1 Started                                                                                                                                        0.3s
+ ✔ Container flask-node-app-node-frontend-1 Started                                                                                                                                        0.3s
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker compose up -d --build
+WARN[0000] /home/azhar/tutedude/AWS_Azharuddin_Ansari/flask-node-app/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Building 1.4s (23/23) FINISHED                                                                                                                                                             
+ => [internal] load local bake definitions                                                                                                                                                0.0s
+ => => reading from stdin 1.16kB                                                                                                                                                          0.0s
+ => [flask-backend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 404B                                                                                                                                                      0.0s
+ => [node-frontend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 375B                                                                                                                                                      0.0s
+ => [node-frontend internal] load metadata for docker.io/library/node:latest                                                                                                              1.1s
+ => [flask-backend internal] load metadata for docker.io/library/python:3.11-slim                                                                                                         1.0s
+ => [flask-backend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 45B                                                                                                                                                          0.0s
+ => [flask-backend 1/5] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                   0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                                 0.0s
+ => [flask-backend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 154B                                                                                                                                                         0.0s
+ => CACHED [flask-backend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [flask-backend 3/5] COPY requirements.txt /app                                                                                                                                 0.0s
+ => CACHED [flask-backend 4/5] RUN pip install -r requirements.txt                                                                                                                        0.0s
+ => CACHED [flask-backend 5/5] COPY . /app                                                                                                                                                0.0s
+ => [flask-backend] exporting to image                                                                                                                                                    0.1s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:5f5d62ee54037d153319f8d77d2ec53b4529c733ab19bab346b6de478ebea428                                                                                         0.0s
+ => => exporting config sha256:b923f0d534ea66f759d6a007b8d23fc6a3d45cf00bd38c1d6b82fd47df66d086                                                                                           0.0s
+ => => exporting attestation manifest sha256:d678a92cde412bd4d9c37f43567385465953beb1caaa6ce8dee5bd32d47a18d0                                                                             0.0s
+ => => exporting manifest list sha256:78b9e74c2881339c9af13139b5d768b4282b09be2f7cd99a61562e45f8d75d98                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                 0.0s
+ => [node-frontend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 72B                                                                                                                                                          0.0s
+ => [node-frontend 1/5] FROM docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                        0.0s
+ => => resolve docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                                      0.0s
+ => [node-frontend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 188B                                                                                                                                                         0.0s
+ => CACHED [node-frontend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [node-frontend 3/5] COPY package.json /app                                                                                                                                     0.0s
+ => CACHED [node-frontend 4/5] RUN npm install                                                                                                                                            0.0s
+ => CACHED [node-frontend 5/5] COPY . /app                                                                                                                                                0.0s
+ => [node-frontend] exporting to image                                                                                                                                                    0.1s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:ecf455250c5668eafeb60024b5a4748e61cc7e809b38d887494ae9737b57a660                                                                                         0.0s
+ => => exporting config sha256:ce32c941c86a3c4f6518f1743e9542e8b79feb6df6484d42098b3f63f194fd50                                                                                           0.0s
+ => => exporting attestation manifest sha256:a2d87b222a18b9489c6e49caf7cfcaaac3d48d5b4348f57dca571677dd4b7af2                                                                             0.0s
+ => => exporting manifest list sha256:53e9ce9ffd2e3c219426bacf4585b1be2b1803a75fdda90172c55d27856e8591                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                 0.0s
+ => [flask-backend] resolving provenance for metadata file                                                                                                                                0.0s
+ => [node-frontend] resolving provenance for metadata file                                                                                                                                0.0s
+[+] up 4/4
+ ✔ Image flask-node-app-node-frontend       Built                                                                                                                                          1.5s
+ ✔ Image flask-node-app-flask-backend       Built                                                                                                                                          1.5s
+ ✔ Container flask-node-app-node-frontend-1 Running                                                                                                                                        0.0s
+ ✔ Container flask-node-app-flask-backend-1 Running                                                                                                                                        0.0s
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker compose up -d --build
+WARN[0000] /home/azhar/tutedude/AWS_Azharuddin_Ansari/flask-node-app/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Building 1.7s (23/23) FINISHED                                                                                                                                                             
+ => [internal] load local bake definitions                                                                                                                                                0.0s
+ => => reading from stdin 1.16kB                                                                                                                                                          0.0s
+ => [flask-backend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 404B                                                                                                                                                      0.0s
+ => [node-frontend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 375B                                                                                                                                                      0.0s
+ => [node-frontend internal] load metadata for docker.io/library/node:latest                                                                                                              1.3s
+ => [flask-backend internal] load metadata for docker.io/library/python:3.11-slim                                                                                                         1.0s
+ => [flask-backend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 45B                                                                                                                                                          0.0s
+ => [flask-backend 1/5] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                   0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                                 0.0s
+ => [flask-backend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 154B                                                                                                                                                         0.0s
+ => CACHED [flask-backend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [flask-backend 3/5] COPY requirements.txt /app                                                                                                                                 0.0s
+ => CACHED [flask-backend 4/5] RUN pip install -r requirements.txt                                                                                                                        0.0s
+ => CACHED [flask-backend 5/5] COPY . /app                                                                                                                                                0.0s
+ => [flask-backend] exporting to image                                                                                                                                                    0.1s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:5f5d62ee54037d153319f8d77d2ec53b4529c733ab19bab346b6de478ebea428                                                                                         0.0s
+ => => exporting config sha256:b923f0d534ea66f759d6a007b8d23fc6a3d45cf00bd38c1d6b82fd47df66d086                                                                                           0.0s
+ => => exporting attestation manifest sha256:7ff7f3a68f2a524570723c2e85dad6ffdc757ae0e09dc8da3d0e26c2772941cf                                                                             0.0s
+ => => exporting manifest list sha256:bbb2c07645e82c786024ba9a2c3d4c00a56792c892ecb5bb367381a3df3ccced                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                 0.0s
+ => [flask-backend] resolving provenance for metadata file                                                                                                                                0.0s
+ => [node-frontend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 72B                                                                                                                                                          0.0s
+ => [node-frontend 1/5] FROM docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                        0.0s
+ => => resolve docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                                      0.0s
+ => [node-frontend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 2.11kB                                                                                                                                                       0.0s
+ => CACHED [node-frontend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [node-frontend 3/5] COPY package.json /app                                                                                                                                     0.0s
+ => CACHED [node-frontend 4/5] RUN npm install                                                                                                                                            0.0s
+ => [node-frontend 5/5] COPY . /app                                                                                                                                                       0.0s
+ => [node-frontend] exporting to image                                                                                                                                                    0.2s
+ => => exporting layers                                                                                                                                                                   0.1s
+ => => exporting manifest sha256:9c0d2dc6549fce064d86a23cf5779ead0827332d810a2fcbea4ef50a704b0b87                                                                                         0.0s
+ => => exporting config sha256:51e682da23fb1e1b05c345bb407ddf763efe49858d884a2f7569dfa42a1b794a                                                                                           0.0s
+ => => exporting attestation manifest sha256:3e33c81acf69ec6f8d5e95ae2c80d37e69ad7570180a300989f2eba7ce652aa0                                                                             0.0s
+ => => exporting manifest list sha256:84e950dac46eead0a2c1cc7f5a589fba88f8f5797a99a210be50f101bf08f3d3                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                 0.0s
+ => [node-frontend] resolving provenance for metadata file                                                                                                                                0.0s
+[+] up 4/4
+ ✔ Image flask-node-app-flask-backend       Built                                                                                                                                          1.8s
+ ✔ Image flask-node-app-node-frontend       Built                                                                                                                                          1.8s
+ ✔ Container flask-node-app-flask-backend-1 Running                                                                                                                                        0.0s
+ ✔ Container flask-node-app-node-frontend-1 Started                                                                                                                                       10.4s
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker compose up -d --build
+WARN[0000] /home/azhar/tutedude/AWS_Azharuddin_Ansari/flask-node-app/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Building 1.7s (25/25) FINISHED                                                                                                                                                             
+ => [internal] load local bake definitions                                                                                                                                                0.0s
+ => => reading from stdin 1.16kB                                                                                                                                                          0.0s
+ => [flask-backend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 404B                                                                                                                                                      0.0s
+ => [node-frontend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 375B                                                                                                                                                      0.0s
+ => [node-frontend internal] load metadata for docker.io/library/node:latest                                                                                                              1.1s
+ => [flask-backend internal] load metadata for docker.io/library/python:3.11-slim                                                                                                         1.3s
+ => [auth] library/node:pull token for registry-1.docker.io                                                                                                                               0.0s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                                                             0.0s
+ => [node-frontend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 72B                                                                                                                                                          0.0s
+ => [node-frontend 1/5] FROM docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                        0.0s
+ => => resolve docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                                      0.0s
+ => [node-frontend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 2.11kB                                                                                                                                                       0.0s
+ => CACHED [node-frontend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [node-frontend 3/5] COPY package.json /app                                                                                                                                     0.0s
+ => CACHED [node-frontend 4/5] RUN npm install                                                                                                                                            0.0s
+ => [node-frontend 5/5] COPY . /app                                                                                                                                                       0.0s
+ => [node-frontend] exporting to image                                                                                                                                                    0.2s
+ => => exporting layers                                                                                                                                                                   0.1s
+ => => exporting manifest sha256:755aafec27fcd02c3e2e35429e39598865ceaa8f1120e14c27a479c2eb82c0da                                                                                         0.0s
+ => => exporting config sha256:69c65fda58c14e91cb345c753f8e20a83a3283ee7941fd8668cdbee3ce81002c                                                                                           0.0s
+ => => exporting attestation manifest sha256:dc60a1a6225573e829adc57952c513d9dd26f50ff20256a49c631988ec67ea24                                                                             0.0s
+ => => exporting manifest list sha256:3f4173012132bfc9a4e46aa9ea720fb77335373aceac947d10e90f438813c4f8                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                 0.0s
+ => [flask-backend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 45B                                                                                                                                                          0.0s
+ => [flask-backend 1/5] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                   0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                                 0.0s
+ => [flask-backend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 154B                                                                                                                                                         0.0s
+ => CACHED [flask-backend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [flask-backend 3/5] COPY requirements.txt /app                                                                                                                                 0.0s
+ => CACHED [flask-backend 4/5] RUN pip install -r requirements.txt                                                                                                                        0.0s
+ => CACHED [flask-backend 5/5] COPY . /app                                                                                                                                                0.0s
+ => [flask-backend] exporting to image                                                                                                                                                    0.1s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:5f5d62ee54037d153319f8d77d2ec53b4529c733ab19bab346b6de478ebea428                                                                                         0.0s
+ => => exporting config sha256:b923f0d534ea66f759d6a007b8d23fc6a3d45cf00bd38c1d6b82fd47df66d086                                                                                           0.0s
+ => => exporting attestation manifest sha256:3898aa105b06a61b6a7948b9c471031c2d03e09765581bc7dcb88ec79b59c733                                                                             0.0s
+ => => exporting manifest list sha256:61ecd0bc7c4f07bf85e18ab042a40f8a64016aa8adfa37413b2e5b6028209736                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                 0.0s
+ => [node-frontend] resolving provenance for metadata file                                                                                                                                0.0s
+ => [flask-backend] resolving provenance for metadata file                                                                                                                                0.0s
+[+] up 4/4
+ ✔ Image flask-node-app-node-frontend       Built                                                                                                                                          1.7s
+ ✔ Image flask-node-app-flask-backend       Built                                                                                                                                          1.7s
+ ✔ Container flask-node-app-flask-backend-1 Running                                                                                                                                        0.0s
+ ✔ Container flask-node-app-node-frontend-1 Started                                                                                                                                       10.4s
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker compose up -d --build
+WARN[0000] /home/azhar/tutedude/AWS_Azharuddin_Ansari/flask-node-app/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Building 1.5s (23/23) FINISHED                                                                                                                                                             
+ => [internal] load local bake definitions                                                                                                                                                0.0s
+ => => reading from stdin 1.16kB                                                                                                                                                          0.0s
+ => [flask-backend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 404B                                                                                                                                                      0.0s
+ => [node-frontend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 375B                                                                                                                                                      0.0s
+ => [flask-backend internal] load metadata for docker.io/library/python:3.11-slim                                                                                                         1.2s
+ => [node-frontend internal] load metadata for docker.io/library/node:latest                                                                                                              1.2s
+ => [node-frontend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 72B                                                                                                                                                          0.0s
+ => [node-frontend 1/5] FROM docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                        0.0s
+ => => resolve docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                                      0.0s
+ => [node-frontend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 188B                                                                                                                                                         0.0s
+ => CACHED [node-frontend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [node-frontend 3/5] COPY package.json /app                                                                                                                                     0.0s
+ => CACHED [node-frontend 4/5] RUN npm install                                                                                                                                            0.0s
+ => CACHED [node-frontend 5/5] COPY . /app                                                                                                                                                0.0s
+ => [node-frontend] exporting to image                                                                                                                                                    0.1s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:755aafec27fcd02c3e2e35429e39598865ceaa8f1120e14c27a479c2eb82c0da                                                                                         0.0s
+ => => exporting config sha256:69c65fda58c14e91cb345c753f8e20a83a3283ee7941fd8668cdbee3ce81002c                                                                                           0.0s
+ => => exporting attestation manifest sha256:08fd7eda4fc378bf3183ca56baa2d95c7fc952eb1e39db32196d6440a262b071                                                                             0.0s
+ => => exporting manifest list sha256:7aebc8bc3893e0e50a268087c166ac4c9ec172b9028875b4a248e11e99c3d121                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                 0.0s
+ => [flask-backend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 45B                                                                                                                                                          0.0s
+ => [flask-backend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 154B                                                                                                                                                         0.0s
+ => [flask-backend 1/5] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                   0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                                 0.0s
+ => CACHED [flask-backend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [flask-backend 3/5] COPY requirements.txt /app                                                                                                                                 0.0s
+ => CACHED [flask-backend 4/5] RUN pip install -r requirements.txt                                                                                                                        0.0s
+ => CACHED [flask-backend 5/5] COPY . /app                                                                                                                                                0.0s
+ => [flask-backend] exporting to image                                                                                                                                                    0.1s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:5f5d62ee54037d153319f8d77d2ec53b4529c733ab19bab346b6de478ebea428                                                                                         0.0s
+ => => exporting config sha256:b923f0d534ea66f759d6a007b8d23fc6a3d45cf00bd38c1d6b82fd47df66d086                                                                                           0.0s
+ => => exporting attestation manifest sha256:635194470b9a1448f4fce52a7ea31e4f9de685961cb3d6a2b59339d70074440f                                                                             0.0s
+ => => exporting manifest list sha256:7fbcdebbd19eec0ea1fb89ce3cb6d0b460d8df63aea530c1fc75e279a15c8a05                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                 0.0s
+ => [node-frontend] resolving provenance for metadata file                                                                                                                                0.0s
+ => [flask-backend] resolving provenance for metadata file                                                                                                                                0.0s
+[+] up 4/4
+ ✔ Image flask-node-app-node-frontend       Built                                                                                                                                          1.6s
+ ✔ Image flask-node-app-flask-backend       Built                                                                                                                                          1.6s
+ ✔ Container flask-node-app-flask-backend-1 Running                                                                                                                                        0.0s
+ ✔ Container flask-node-app-node-frontend-1 Started                                                                                                                                       10.4s
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker images
+                                                                                                                                                                           i Info →   U  In Use
+IMAGE                                 ID             DISK USAGE   CONTENT SIZE   EXTRA
+flask-node-app-flask-backend:latest   7fbcdebbd19e        214MB         52.3MB    U   
+flask-node-app-node-frontend:latest   7aebc8bc3893        1.8GB          448MB    U   
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/w6g4t0c6
+
+aws: [ERROR]: Your session has expired. Please reauthenticate using 'aws login'.
+password is empty
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ aws login
+Attempting to open your default browser. If the browser does not open, open the following URL.
+If you are unable to open the URL on this device, run this command again with the '--remote' option.
+
+https://ap-south-1.signin.aws.amazon.com/v1/authorize?response_type=code&client_id=arn%3Aaws%3Asignin%3A%3A%3Adevtools%2Fsame-device&state=d0bf95b5-cac1-45f1-8dc7-124a3e6b6fd3&code_challenge_method=SHA-256&scope=openid&redirect_uri=http%3A%2F%2F127.0.0.1%3A41501%2Foauth%2Fcallback&code_challenge=cwb-vpOElH5tnPYMzyKLL4_Eya0ldixECU8O1M93GFk
+
+pci id for fd 4: 10de:2c05, driver (null)
+pci id for fd 7: 10de:2c05, driver (null)
+pci id for fd 8: 10de:2c05, driver (null)
+pci id for fd 7: 10de:2c05, driver (null)
+pci id for fd 8: 10de:2c05, driver (null)
+Opening in existing browser session.
+[35362:35362:0100/000000.660286:ERROR:content/zygote/zygote_linux.cc:662] write: Broken pipe (32)
+[1:1:0100/000000.660565:ERROR:content/zygote/zygote_main_linux.cc:197] Failed sending zygote boot message: Broken pipe (32)
+
+Updated profile default to use arn:aws:iam::889149079394:user/albert credentials.
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ aws login
+Attempting to open your default browser. If the browser does not open, open the following URL.
+If you are unable to open the URL on this device, run this command again with the '--remote' option.
+
+https://ap-south-1.signin.aws.amazon.com/v1/authorize?response_type=code&client_id=arn%3Aaws%3Asignin%3A%3A%3Adevtools%2Fsame-device&state=d3c7549f-bfdb-4e42-8b91-9ff9a3565af6&code_challenge_method=SHA-256&scope=openid&redirect_uri=http%3A%2F%2F127.0.0.1%3A42281%2Foauth%2Fcallback&code_challenge=Eo5Y6zJKj83SMe1Z9lZ4Wb2NX17LVQKmRhzqi9zHNmw
+
+pci id for fd 4: 10de:2c05, driver (null)
+pci id for fd 7: 10de:2c05, driver (null)
+pci id for fd 8: 10de:2c05, driver (null)
+pci id for fd 7: 10de:2c05, driver (null)
+pci id for fd 8: 10de:2c05, driver (null)
+Opening in existing browser session.
+[35581:35581:0100/000000.860424:ERROR:content/zygote/zygote_linux.cc:662] write: Broken pipe (32)
+[1:1:0100/000000.860824:ERROR:content/zygote/zygote_main_linux.cc:197] Failed sending zygote boot message: Broken pipe (32)
+
+Updated profile default to use arn:aws:iam::889149079394:user/albert credentials.
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/w6g4t0c6
+
+WARNING! Your credentials are stored unencrypted in '/home/azhar/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker images
+                                                                                                                                                                           i Info →   U  In Use
+IMAGE                                 ID             DISK USAGE   CONTENT SIZE   EXTRA
+flask-node-app-flask-backend:latest   7fbcdebbd19e        214MB         52.3MB    U   
+flask-node-app-node-frontend:latest   7aebc8bc3893        1.8GB          448MB    U   
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker tag flask-node-app-flask-backend:latest public.ecr.aws/w6g4t0c6/flask-node-app-flask-backend:latest
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker push public.ecr.aws/w6g4t0c6/flask-node-app-flask-backend:latest
+The push refers to repository [public.ecr.aws/w6g4t0c6/flask-node-app-flask-backend]
+53daecf7856e: Pushing [>                                                  ]       0B/1.29MB
+53daecf7856e: Pushing [========================================>          ]  1.049MB/1.29MB
+44136fa355b3: Pushed 
+53daecf7856e: Pushed 
+37fb86c2a767: Pushed 
+557dd9f99916: Pushed 
+bbe7053e6def: Pushed 
+1d8f14881b3c: Pushed 
+5a422c51e889: Pushed 
+e1049f192cae: Pushed 
+latest: digest: sha256:7fbcdebbd19eec0ea1fb89ce3cb6d0b460d8df63aea530c1fc75e279a15c8a05 size: 856
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker tag flask-node-app-node-frontend:latest public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker push public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
+The push refers to repository [public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend]
+e8a88afca2bd: Pushed 
+44136fa355b3: Pushed 
+a6dd1c05fbba: Pushed 
+0c4c28bc96b9: Pushed 
+411d2dc8717d: Pushed 
+696c1fe91c64: Pushed 
+14f1299dcbc9: Pushed 
+4266ea158291: Pushed 
+eca6dde014d7: Pushed 
+dfc3e23f0e9c: Pushed 
+60f0c0a12e5f: Pushed 
+f268a8a73e04: Pushed 
+5ba0ac81a7aa: Pushed 
+latest: digest: sha256:7aebc8bc3893e0e50a268087c166ac4c9ec172b9028875b4a248e11e99c3d121 size: 856
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker images
+                                                                                                                                                                           i Info →   U  In Use
+IMAGE                                                         ID             DISK USAGE   CONTENT SIZE   EXTRA
+flask-node-app-flask-backend:latest                           7fbcdebbd19e        214MB         52.3MB    U   
+flask-node-app-node-frontend:latest                           7aebc8bc3893        1.8GB          448MB    U   
+public.ecr.aws/w6g4t0c6/flask-node-app-flask-backend:latest   7fbcdebbd19e        214MB         52.3MB    U   
+public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest   7aebc8bc3893        1.8GB          448MB    U   
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker compose up -d --build
+WARN[0000] /home/azhar/tutedude/AWS_Azharuddin_Ansari/flask-node-app/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Building 2.4s (25/25) FINISHED                                                                                                                                                             
+ => [internal] load local bake definitions                                                                                                                                                0.0s
+ => => reading from stdin 1.16kB                                                                                                                                                          0.0s
+ => [flask-backend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 402B                                                                                                                                                      0.0s
+ => [node-frontend internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 375B                                                                                                                                                      0.0s
+ => [flask-backend internal] load metadata for docker.io/library/python:3.11-slim                                                                                                         1.8s
+ => [node-frontend internal] load metadata for docker.io/library/node:latest                                                                                                              1.8s
+ => [auth] library/node:pull token for registry-1.docker.io                                                                                                                               0.0s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                                                             0.0s
+ => [node-frontend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 72B                                                                                                                                                          0.0s
+ => [flask-backend internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 45B                                                                                                                                                          0.0s
+ => [node-frontend 1/5] FROM docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                        0.0s
+ => => resolve docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                                      0.0s
+ => [node-frontend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 2.10kB                                                                                                                                                       0.0s
+ => [flask-backend 1/5] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                   0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                                 0.0s
+ => [flask-backend internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 528B                                                                                                                                                         0.0s
+ => CACHED [node-frontend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [node-frontend 3/5] COPY package.json /app                                                                                                                                     0.0s
+ => CACHED [node-frontend 4/5] RUN npm install                                                                                                                                            0.0s
+ => [node-frontend 5/5] COPY . /app                                                                                                                                                       0.0s
+ => CACHED [flask-backend 2/5] WORKDIR /app                                                                                                                                               0.0s
+ => CACHED [flask-backend 3/5] COPY requirements.txt /app                                                                                                                                 0.0s
+ => CACHED [flask-backend 4/5] RUN pip install -r requirements.txt                                                                                                                        0.0s
+ => [flask-backend 5/5] COPY . /app                                                                                                                                                       0.0s
+ => [node-frontend] exporting to image                                                                                                                                                    0.3s
+ => => exporting layers                                                                                                                                                                   0.1s
+ => => exporting manifest sha256:78b3cceefe4fbabf5a68ed4a9d254665bad643bee35f6c04a833aa5479270acb                                                                                         0.0s
+ => => exporting config sha256:32d576895faa66ac19eb16d681c618bb1071384ca556dc5d9c339293dcd85dee                                                                                           0.0s
+ => => exporting attestation manifest sha256:127747a94429f6bad349777c927bd5449f7e76593b56fcd2b86996a0f9f5d6a9                                                                             0.0s
+ => => exporting manifest list sha256:9874b2ad681c6fa41578efb518820663e0e29248e69b7a5a9bf2469a359824e5                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-node-frontend:latest                                                                                                                 0.0s
+ => [flask-backend] exporting to image                                                                                                                                                    0.3s
+ => => exporting layers                                                                                                                                                                   0.1s
+ => => exporting manifest sha256:861f7bb04760b69bfc90ffb1b52e91ed7d7467036743480b7b8c71afc4e2cf0a                                                                                         0.0s
+ => => exporting config sha256:12e36e8b1c7fd3e0468aefcf9e6546124c20a35cdb8b240e8353a71d8f8f5560                                                                                           0.0s
+ => => exporting attestation manifest sha256:73cdd2cd43be78a262620b529362403c8091f0f43a2478aad6bfdb04b1bd3bca                                                                             0.0s
+ => => exporting manifest list sha256:b1932b02a0c6955d2fc1bf1ef4c226c8567cd9437fcfdac6810c29207c3baa90                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                    0.0s
+ => => unpacking to docker.io/library/flask-node-app-flask-backend:latest                                                                                                                 0.0s
+ => [node-frontend] resolving provenance for metadata file                                                                                                                                0.0s
+ => [flask-backend] resolving provenance for metadata file                                                                                                                                0.0s
+[+] up 4/4
+ ✔ Image flask-node-app-node-frontend       Built                                                                                                                                          2.5s
+ ✔ Image flask-node-app-flask-backend       Built                                                                                                                                          2.5s
+ ✔ Container flask-node-app-flask-backend-1 Started                                                                                                                                       20.6s
+ ✔ Container flask-node-app-node-frontend-1 Started                                                                                                                                       10.5s
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker tag flask-node-app-node-frontend:latest public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker push public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
+The push refers to repository [public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend]
+44136fa355b3: Already exists 
+e8a88afca2bd: Layer already exists 
+b7645b4517dc: Waiting 
+a6dd1c05fbba: Layer already exists 
+b7645b4517dc: Pushing [==================================================>]  1.665kB/1.665kB
+b7645b4517dc: Pushing [==================================================>]  1.665kB/1.665kB
+b7645b4517dc: Pushed 
+4266ea158291: Layer already exists 
+eca6dde014d7: Layer already exists 
+60f0c0a12e5f: Layer already exists 
+dfc3e23f0e9c: Layer already exists 
+f268a8a73e04: Layer already exists 
+e103be0bb749: Pushed 
+latest: digest: sha256:9874b2ad681c6fa41578efb518820663e0e29248e69b7a5a9bf2469a359824e5 size: 856
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker compose up -d --build
+validating /home/azhar/tutedude/AWS_Azharuddin_Ansari/flask-node-app/docker-compose.yaml: services.frontend.environment must be a mapping
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker compose up -d --build
+WARN[0000] /home/azhar/tutedude/AWS_Azharuddin_Ansari/flask-node-app/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Building 1.9s (25/25) FINISHED                                                                                                                                                             
+ => [internal] load local bake definitions                                                                                                                                                0.0s
+ => => reading from stdin 1.12kB                                                                                                                                                          0.0s
+ => [backend internal] load build definition from Dockerfile                                                                                                                              0.0s
+ => => transferring dockerfile: 402B                                                                                                                                                      0.0s
+ => [frontend internal] load build definition from Dockerfile                                                                                                                             0.0s
+ => => transferring dockerfile: 375B                                                                                                                                                      0.0s
+ => [frontend internal] load metadata for docker.io/library/node:latest                                                                                                                   1.4s
+ => [backend internal] load metadata for docker.io/library/python:3.11-slim                                                                                                               1.4s
+ => [auth] library/node:pull token for registry-1.docker.io                                                                                                                               0.0s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                                                             0.0s
+ => [backend internal] load .dockerignore                                                                                                                                                 0.0s
+ => => transferring context: 45B                                                                                                                                                          0.0s
+ => [backend 1/5] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                         0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                                 0.0s
+ => [backend internal] load build context                                                                                                                                                 0.0s
+ => => transferring context: 1.90kB                                                                                                                                                       0.0s
+ => [frontend internal] load .dockerignore                                                                                                                                                0.0s
+ => => transferring context: 72B                                                                                                                                                          0.0s
+ => [frontend 1/5] FROM docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                             0.0s
+ => => resolve docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                                      0.0s
+ => [frontend internal] load build context                                                                                                                                                0.0s
+ => => transferring context: 2.11kB                                                                                                                                                       0.0s
+ => CACHED [backend 2/5] WORKDIR /app                                                                                                                                                     0.0s
+ => CACHED [backend 3/5] COPY requirements.txt /app                                                                                                                                       0.0s
+ => CACHED [backend 4/5] RUN pip install -r requirements.txt                                                                                                                              0.0s
+ => CACHED [backend 5/5] COPY . /app                                                                                                                                                      0.0s
+ => [backend] exporting to image                                                                                                                                                          0.2s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:5397780c9d5567d21e7ff4fd996c3d169dcfd70837fbb48a936752c84a1e5869                                                                                         0.0s
+ => => exporting config sha256:396021eef25ded262712fe35dc3dbab25924e19df4293eccc0bb07ecce2482ee                                                                                           0.0s
+ => => exporting attestation manifest sha256:b44d864fb8769f5fe7f325a8710c5bbb48b48a9af0c9f15f41cd66595c040ffb                                                                             0.0s
+ => => exporting manifest list sha256:ac8cc176308cc332437e3f658e3864c10ca7537568b8ced6fe4ef4e4b83b28a5                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-backend:latest                                                                                                                          0.0s
+ => => unpacking to docker.io/library/flask-node-app-backend:latest                                                                                                                       0.0s
+ => CACHED [frontend 2/5] WORKDIR /app                                                                                                                                                    0.0s
+ => CACHED [frontend 3/5] COPY package.json /app                                                                                                                                          0.0s
+ => CACHED [frontend 4/5] RUN npm install                                                                                                                                                 0.0s
+ => CACHED [frontend 5/5] COPY . /app                                                                                                                                                     0.0s
+ => [frontend] exporting to image                                                                                                                                                         0.2s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:0013708408449e37bbe6ada6ff5a580fbce3f0adebc386eb74eea1d0735acc85                                                                                         0.0s
+ => => exporting config sha256:7779dad26a10509024ebf881053648b7a5cf2ac0e82d5f7cd02843ae54f9e6dc                                                                                           0.0s
+ => => exporting attestation manifest sha256:bc631268fcf88b8cafc1efc54bdf756df7be3d21deeb54e2f3c08aa57960a66e                                                                             0.0s
+ => => exporting manifest list sha256:ce9844dafdbe4da3b53b3aab56bbc9dc1a3d5d46f41029f029df2e979ee82409                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-frontend:latest                                                                                                                         0.0s
+ => => unpacking to docker.io/library/flask-node-app-frontend:latest                                                                                                                      0.0s
+ => [backend] resolving provenance for metadata file                                                                                                                                      0.0s
+ => [frontend] resolving provenance for metadata file                                                                                                                                     0.0s
+WARN[0001] Found orphan containers (flask-node-app-node-frontend-1, flask-node-app-flask-backend-1) for this project. If you removed or renamed this service in your compose file, you can runthis command with the --remove-orphans flag to clean it up. 
+[+] up 4/4
+ ✔ Image flask-node-app-frontend       Built                                                                                                                                               1.9s
+ ✔ Image flask-node-app-backend        Built                                                                                                                                               1.9s
+ ✘ Container flask-node-app-backend-1  Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint flask-node-app-ba... 0.3s
+ ✘ Container flask-node-app-frontend-1 not started: interrupted by the failure of Container flask-node-app-backend-1                                                                       0.0s
+Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint flask-node-app-backend-1 (72e119510745f8d2e35b75fd19b926444518fbcea567f71e1cc1ff0b4d95ed2d): Bind for 0.0.0.0:5000 failed: port is already allocated
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker ps
+CONTAINER ID   IMAGE                          COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+f1f49a8b987d   flask-node-app-node-frontend   "docker-entrypoint.s…"   30 minutes ago   Up 30 minutes   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   flask-node-app-node-frontend-1
+35184eea5e1a   flask-node-app-flask-backend   "python app.py"          31 minutes ago   Up 30 minutes   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   flask-node-app-flask-backend-1
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker stop $(docker ps -aq)
+125d134e898c
+486611e00996
+f1f49a8b987d
+35184eea5e1a
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker ps -a
+CONTAINER ID   IMAGE                          COMMAND                  CREATED          STATUS                        PORTS     NAMES
+125d134e898c   flask-node-app-frontend        "docker-entrypoint.s…"   56 seconds ago   Created                                 flask-node-app-frontend-1
+486611e00996   flask-node-app-backend         "python app.py"          56 seconds ago   Created                                 flask-node-app-backend-1
+f1f49a8b987d   flask-node-app-node-frontend   "docker-entrypoint.s…"   31 minutes ago   Exited (137) 14 seconds ago             flask-node-app-node-frontend-1
+35184eea5e1a   flask-node-app-flask-backend   "python app.py"          31 minutes ago   Exited (137) 14 seconds ago             flask-node-app-flask-backend-1
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker rmi (docker images)
+bash: syntax error near unexpected token `('
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker rmi $(docker images)
+Untagged: flask-node-app-node-frontend:latest
+Untagged: public.ecr.aws/w6g4t0c6/flask-node-app-flask-backend:latest
+Deleted: sha256:7fbcdebbd19eec0ea1fb89ce3cb6d0b460d8df63aea530c1fc75e279a15c8a05
+Error response from daemon: invalid reference format: repository name (library/IMAGE) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/ID) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/DISK) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/USAGE) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/CONTENT) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/SIZE) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/EXTRA) must be lowercase
+Error response from daemon: conflict: unable to delete flask-node-app-backend:latest (must be forced) - container 486611e00996 is using its referenced image ac8cc176308c
+Error response from daemon: conflict: unable to delete ac8cc176308c (must be forced) - image is being used by stopped container 486611e00996
+Error response from daemon: invalid reference format: repository name (library/214MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/52.3MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/U) must be lowercase
+Error response from daemon: conflict: unable to delete flask-node-app-flask-backend:latest (must be forced) - container 35184eea5e1a is using its referenced image b1932b02a0c6
+Error response from daemon: conflict: unable to delete b1932b02a0c6 (must be forced) - image is being used by stopped container 35184eea5e1a
+Error response from daemon: invalid reference format: repository name (library/214MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/52.3MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/U) must be lowercase
+Error response from daemon: conflict: unable to delete flask-node-app-frontend:latest (must be forced) - container 125d134e898c is using its referenced image ce9844dafdbe
+Error response from daemon: conflict: unable to delete ce9844dafdbe (must be forced) - image is being used by stopped container 125d134e898c
+Error response from daemon: invalid reference format: repository name (library/1.8GB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/448MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/U) must be lowercase
+Error response from daemon: conflict: unable to delete 9874b2ad681c (must be forced) - image is being used by stopped container f1f49a8b987d
+Error response from daemon: invalid reference format: repository name (library/1.8GB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/448MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/U) must be lowercase
+Error response from daemon: No such image: 7fbcdebbd19e:latest
+Error response from daemon: invalid reference format: repository name (library/214MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/52.3MB) must be lowercase
+Error response from daemon: conflict: unable to delete public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest (must be forced) - container f1f49a8b987d is using its referenced image 9874b2ad681c
+Error response from daemon: conflict: unable to delete 9874b2ad681c (must be forced) - image is being used by stopped container f1f49a8b987d
+Error response from daemon: invalid reference format: repository name (library/1.8GB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/448MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/U) must be lowercase
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker rm $(docker ps -aq)
+125d134e898c
+486611e00996
+f1f49a8b987d
+35184eea5e1a
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker rmi -f $(docker images)
+Untagged: flask-node-app-backend:latest
+Deleted: sha256:ac8cc176308cc332437e3f658e3864c10ca7537568b8ced6fe4ef4e4b83b28a5
+Untagged: flask-node-app-flask-backend:latest
+Deleted: sha256:b1932b02a0c6955d2fc1bf1ef4c226c8567cd9437fcfdac6810c29207c3baa90
+Untagged: flask-node-app-frontend:latest
+Deleted: sha256:ce9844dafdbe4da3b53b3aab56bbc9dc1a3d5d46f41029f029df2e979ee82409
+Untagged: public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
+Deleted: sha256:9874b2ad681c6fa41578efb518820663e0e29248e69b7a5a9bf2469a359824e5
+Error response from daemon: invalid reference format: repository name (library/IMAGE) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/ID) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/DISK) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/USAGE) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/CONTENT) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/SIZE) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/EXTRA) must be lowercase
+Error response from daemon: No such image: ac8cc176308c:latest
+Error response from daemon: invalid reference format: repository name (library/214MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/52.3MB) must be lowercase
+Error response from daemon: No such image: b1932b02a0c6:latest
+Error response from daemon: invalid reference format: repository name (library/214MB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/52.3MB) must be lowercase
+Error response from daemon: No such image: ce9844dafdbe:latest
+Error response from daemon: invalid reference format: repository name (library/1.8GB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/448MB) must be lowercase
+Error response from daemon: No such image: 9874b2ad681c:latest
+Error response from daemon: invalid reference format: repository name (library/1.8GB) must be lowercase
+Error response from daemon: invalid reference format: repository name (library/448MB) must be lowercase
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker compose up -d --build
+WARN[0000] /home/azhar/tutedude/AWS_Azharuddin_Ansari/flask-node-app/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Building 1.5s (23/23) FINISHED                                                                                                                                                             
+ => [internal] load local bake definitions                                                                                                                                                0.0s
+ => => reading from stdin 1.12kB                                                                                                                                                          0.0s
+ => [frontend internal] load build definition from Dockerfile                                                                                                                             0.0s
+ => => transferring dockerfile: 375B                                                                                                                                                      0.0s
+ => [backend internal] load build definition from Dockerfile                                                                                                                              0.0s
+ => => transferring dockerfile: 402B                                                                                                                                                      0.0s
+ => [frontend internal] load metadata for docker.io/library/node:latest                                                                                                                   1.2s
+ => [backend internal] load metadata for docker.io/library/python:3.11-slim                                                                                                               0.8s
+ => [backend internal] load .dockerignore                                                                                                                                                 0.0s
+ => => transferring context: 45B                                                                                                                                                          0.0s
+ => [backend 1/5] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                         0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535                                                                 0.0s
+ => [backend internal] load build context                                                                                                                                                 0.0s
+ => => transferring context: 154B                                                                                                                                                         0.0s
+ => CACHED [backend 2/5] WORKDIR /app                                                                                                                                                     0.0s
+ => CACHED [backend 3/5] COPY requirements.txt /app                                                                                                                                       0.0s
+ => CACHED [backend 4/5] RUN pip install -r requirements.txt                                                                                                                              0.0s
+ => CACHED [backend 5/5] COPY . /app                                                                                                                                                      0.0s
+ => [backend] exporting to image                                                                                                                                                          0.2s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:5397780c9d5567d21e7ff4fd996c3d169dcfd70837fbb48a936752c84a1e5869                                                                                         0.0s
+ => => exporting config sha256:396021eef25ded262712fe35dc3dbab25924e19df4293eccc0bb07ecce2482ee                                                                                           0.0s
+ => => exporting attestation manifest sha256:af0ebde8635ae3df0f43039439ca603174de8ebc57f2f37bbc944b59181bc844                                                                             0.0s
+ => => exporting manifest list sha256:418d41f04a681d118648a8787e69370a9e9482f79a63a78fa87e40a61eb86116                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-backend:latest                                                                                                                          0.0s
+ => => unpacking to docker.io/library/flask-node-app-backend:latest                                                                                                                       0.1s
+ => [backend] resolving provenance for metadata file                                                                                                                                      0.0s
+ => [frontend internal] load .dockerignore                                                                                                                                                0.0s
+ => => transferring context: 72B                                                                                                                                                          0.0s
+ => [frontend internal] load build context                                                                                                                                                0.0s
+ => => transferring context: 188B                                                                                                                                                         0.0s
+ => [frontend 1/5] FROM docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                             0.0s
+ => => resolve docker.io/library/node:latest@sha256:e18c3ccdf7d71619990b0e85639f506e2028a95410999cab24cc373cbd10e0ac                                                                      0.0s
+ => CACHED [frontend 2/5] WORKDIR /app                                                                                                                                                    0.0s
+ => CACHED [frontend 3/5] COPY package.json /app                                                                                                                                          0.0s
+ => CACHED [frontend 4/5] RUN npm install                                                                                                                                                 0.0s
+ => CACHED [frontend 5/5] COPY . /app                                                                                                                                                     0.0s
+ => [frontend] exporting to image                                                                                                                                                         0.1s
+ => => exporting layers                                                                                                                                                                   0.0s
+ => => exporting manifest sha256:0013708408449e37bbe6ada6ff5a580fbce3f0adebc386eb74eea1d0735acc85                                                                                         0.0s
+ => => exporting config sha256:7779dad26a10509024ebf881053648b7a5cf2ac0e82d5f7cd02843ae54f9e6dc                                                                                           0.0s
+ => => exporting attestation manifest sha256:689f783c6ec311794610b9ef2fbb8bda6dcb8edafded18f7d0a217f3483090c3                                                                             0.0s
+ => => exporting manifest list sha256:55c3f672cf08d3ee9f5ec93eda4aaa3bc9ea1f2fefca723d63aacafbaef2d861                                                                                    0.0s
+ => => naming to docker.io/library/flask-node-app-frontend:latest                                                                                                                         0.0s
+ => => unpacking to docker.io/library/flask-node-app-frontend:latest                                                                                                                      0.0s
+ => [frontend] resolving provenance for metadata file                                                                                                                                     0.0s
+[+] up 4/4
+ ✔ Image flask-node-app-frontend       Built                                                                                                                                               1.5s
+ ✔ Image flask-node-app-backend        Built                                                                                                                                               1.5s
+ ✔ Container flask-node-app-backend-1  Started                                                                                                                                             0.2s
+ ✔ Container flask-node-app-frontend-1 Started                                                                                                                                             0.3s
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker images
+                                                                                                                                                                           i Info →   U  In Use
+IMAGE                            ID             DISK USAGE   CONTENT SIZE   EXTRA
+flask-node-app-backend:latest    418d41f04a68        214MB         52.3MB    U   
+flask-node-app-frontend:latest   55c3f672cf08        1.8GB          448MB    U   
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker tag flask-node-app-node-frontend:latest public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
+Error response from daemon: No such image: flask-node-app-node-frontend:latest
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker push public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
+The push refers to repository [public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend]
+tag does not exist: public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker tag flask-node-app-frontend:latest public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker push public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
+The push refers to repository [public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend]
+e8a88afca2bd: Layer already exists 
+d3a9b600cc7e: Pushing [==================================================>]  1.659kB/1.659kB
+d3a9b600cc7e: Pushing [==================================================>]  1.659kB/1.659kB
+44136fa355b3: Already exists 
+d3a9b600cc7e: Pushing [==================================================>]  1.659kB/1.659kB
+d3a9b600cc7e: Pushing [==================================================>]  1.659kB/1.659kB
+d3a9b600cc7e: Pushed 
+4266ea158291: Layer already exists 
+eca6dde014d7: Layer already exists 
+dfc3e23f0e9c: Layer already exists 
+60f0c0a12e5f: Layer already exists 
+f268a8a73e04: Layer already exists 
+2dfde8aa5151: Pushed 
+latest: digest: sha256:55c3f672cf08d3ee9f5ec93eda4aaa3bc9ea1f2fefca723d63aacafbaef2d861 size: 856
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker tag flask-node-app-backend:latest public.ecr.aws/w6g4t0c6/flask-node-app-flask-backend:latest
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ docker push public.ecr.aws/w6g4t0c6/flask-node-app-flask-backend:latest
+The push refers to repository [public.ecr.aws/w6g4t0c6/flask-node-app-flask-backend]
+37fb86c2a767: Layer already exists 
+53daecf7856e: Layer already exists 
+192de891722c: Pushing [==================================================>]   1.66kB/1.66kB
+192de891722c: Pushed 
+7efbce397249: Layer already exists 
+bbe7053e6def: Layer already exists 
+557dd9f99916: Layer already exists 
+1d8f14881b3c: Layer already exists 
+5a422c51e889: Layer already exists 
+db79ce9cb594: Pushed 
+latest: digest: sha256:418d41f04a681d118648a8787e69370a9e9482f79a63a78fa87e40a61eb86116 size: 856
+azhar@azhar9983:~/tutedude/AWS_Azharuddin_Ansari/flask-node-app$ 

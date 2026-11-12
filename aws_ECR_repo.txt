@@ -1,5 +1,5 @@
 
 # aws ecr images 
 
-public.ecr.aws/w6g4t0c6/azhar9983/fn-backend 
-public.ecr.aws/w6g4t0c6/azhar9983/fn-frontend
+public.ecr.aws/w6g4t0c6/flask-node-app-flask-backend:latest
+public.ecr.aws/w6g4t0c6/flask-node-app-node-frontend:latest
